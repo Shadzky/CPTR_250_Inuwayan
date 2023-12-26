@@ -1,0 +1,108 @@
+@media only screen and (max-width: 600px) {
+
+    .nav-item:hover {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    .box-contianer h3 {
+        font-size: 20px;
+    }
+
+    .box-item-img {
+        height: 40px;
+    }
+
+    .item-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box-item {
+        width: 250px;
+        height: 75px;
+        margin: 0px 10px 10px 10px;
+    }
+
+    #Inuwayan {
+        font-size: 20px;
+    }
+
+    .contacts img {
+        height: 20px;
+    }
+
+    .socials img {
+        height: 20px;
+    }
+
+    .footnav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacts-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        height: 150px;
+        margin: 3px;
+      }
+
+      .card {
+        width: 150px;
+        height: 300px;
+      }
+
+      .card-img-top {
+        width: 150px;
+        height: 165px;
+      }
+
+      .card-title {
+        font-size: 13px;
+      }
+
+      .card-text {
+        font-size: 10px;
+      }
+      
+      .btn-success {
+        font-size: 10px;
+      }
+
+      .biel-item img{
+        height: 100px;
+      }
+
+      .input-group {
+        width: 80%;
+      }
+
+    .biel {
+      width: 80%;
+    }
+
+  .feat-item {
+    height: 200PX;
+  }
+
+  .feat-item iframe {
+    width: 250px;
+    height: 175px;
+  }
+
+  .feat-img {
+    width: 200px;
+  }
+
+  .cart-card {
+    height: 250px;
+  }
+}

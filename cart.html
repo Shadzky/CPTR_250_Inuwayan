@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/queries.css">
+    <title>Cart</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo.png" alt="Inuwayan">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About Us</a>
+          </li>
+          <li class="nav-item cart">
+            <a class="nav-link active" href="./cart.html">
+              <img src="./img/cart.png" style="width: 30px;" alt="Cart">
+              Cart
+            </a>
+            
+          </li>
+        </ul>
+        <div class="login nav-item">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn login-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Log in / Sign Up
+          </button>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+
+              <div class="modal-content">
+                  <div class="wrapper">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="title-text">
+                       <div class="title login">
+                          Log In
+                       </div>
+                       <div class="title signup">
+                          Sign Up
+                       </div>
+                    </div>
+                    <div class="form-container">
+                       <div class="slide-controls">
+                          <input type="radio" name="slide" id="login" checked>
+                          <input type="radio" name="slide" id="signup">
+                          <label for="login" class="slide login">Login</label>
+                          <label for="signup" class="slide signup">Signup</label>
+                          <div class="slider-tab"></div>
+                       </div>
+                       <div class="form-inner">
+                          <form action="#" class="login">
+                             <div class="field">
+                                <input type="email" placeholder="Email Address" required>
+                             </div>
+                             <div class="field">
+                                <input type="password" placeholder="Password" required>
+                             </div>
+                             <div class="pass-link">
+                                <a href="#">Forgot password?</a>
+                             </div>
+                             <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Login">
+                             </div>
+                             <div class="signup-link">
+                                Not a member? <a href="">Signup now</a>
+                             </div>
+                          </form>
+                          <form action="#" class="signup">
+                             <div class="field">
+                                <input type="email" placeholder="Email Address" required>
+                             </div>
+                             <div class="field">
+                                <input type="password" placeholder="Password" required>
+                             </div>
+                             <div class="field">
+                                <input type="password" placeholder="Confirm password" required>
+                             </div>
+                             <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Signup">
+                             </div>
+                          </form>
+                       </div>
+                    </div>
+                 </div>
+                 <script>
+                    const loginText = document.querySelector(".title-text .login");
+                    const loginForm = document.querySelector("form.login");
+                    const loginBtn = document.querySelector("label.login");
+                    const signupBtn = document.querySelector("label.signup");
+                    const signupLink = document.querySelector("form .signup-link a");
+                    signupBtn.onclick = (()=>{
+                      loginForm.style.marginLeft = "-50%";
+                      loginText.style.marginLeft = "-50%";
+                    });
+                    loginBtn.onclick = (()=>{
+                      loginForm.style.marginLeft = "0%";
+                      loginText.style.marginLeft = "0%";
+                    });
+                    signupLink.onclick = (()=>{
+                      signupBtn.click();
+                      return false;
+                    });
+                 </script>
+
+              </div>
+            </div>
+          </div>
+        </div>
+  </nav>
+
+  <hr size="5" width="95%" color="#292929">
+  <div class="cart">
+    <div class="cart-container">
+        <div class="cart-card card">
+            <img src="./img/1adams.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Bugnay Wine-1Adams</h5>
+                <p class="card-text">Php 170.00</p>
+            </div>
+        </div>
+        
+        <div class="cart-card card">
+            <img src="./img/malubeg.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Malubeg Wine</h5>
+              <p class="card-text">Php 250.00</p>
+            </div>
+        </div>
+         
+        <div class="cart-card card">
+            <img src="./img/milk.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Milk Chocolate</h5>
+              <p class="card-text">Php 130.00</p>
+            </div>
+        </div>
+        
+        <div class="cart-card card">
+            <img src="./img/kape.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Kape Barako (Brewed Coffee)</h5>
+              <p class="card-text">Php 100.00</p>
+            </div>
+        </div>
+        
+        <div class="cart-card card">
+            <img src="./img/vinegar.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bugnay Balsamic Vinegar</h5>
+              <p class="card-text">Php</p>
+            </div>
+        </div>
+    
+        <div class="cart-card card">
+            <img src="./img/hot choco.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Hot Choco Stick 5pcs.</h5>
+              <p class="card-text">Php 250.00</p>
+            </div>
+        </div>
+      </div>
+    <a href="#" class="btn btn-success" style="width: 200px;margin: 0 auto;">Proced to Checkout</a>
+  </div>
+  
+  
+
+
+  <hr size="5" width="95%" color="#292929">
+  
+  <!--FOOTNAV-->
+  <nav class="footnav">
+    
+    <div class="contacts-container">
+      <h4>
+        Contact the following for any Inquiries:
+      </h4>
+      <div class="contacts">
+        <div class="contacts-item">
+          <img src="./img/phone.png" class="item" alt="Call or Text">
+          <a href=""  class="item">
+            <p>+639616648355</p>
+          </a>
+        </div>
+        <div class="contacts-item">
+          <img src="./img/mail.png" class="item" alt="Mail">
+          <a href="mailto:oneadams2001@gmail.com = Feedback&body = Message"  class="item">
+            <p>oneadams2001@gmail.com</p>
+          </a>
+        </div>
+        <div class="contacts-item">
+          <img src="./img/fb.png" class="item" alt="Messenger">
+          <a href="https://www.facebook.com/p/Inuwayan-Farm-Productions-100083355910096/" class="item">
+            <p>Inuwayan Farm Productions</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="vl"></div>
+
+    <div class="socials-container">
+      <h4>
+        Follow Our Socials
+      </h4>
+      <div class="socials">
+        <div class="socials-item">
+            <img src="./img/fb.png" class="item" alt="Facebook:">
+          <a href="https://www.facebook.com/p/Inuwayan-Farm-Productions-100083355910096/"  class="item">
+            <p>Inuwayan Farm Productions</p>
+          </a>
+        </div>
+        <div class="socials-item">
+          <img src="./img/twitter-02.png" class="item" alt="Twitter:">
+          <a href=""  class="item">
+          <p>Inuwayan Farm Productions</p>  
+          </a>
+        </div>
+        <div class="socials-item">
+          <img src="./img/insta-02.png" class="item" alt="Instagram:">
+          <a href=""  class="item">
+            <p>Inuwayan Farm Productions</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+</body>
+</html>
